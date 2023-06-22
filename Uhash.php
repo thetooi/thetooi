@@ -1,3 +1,4 @@
+<?php
 function uhash($string) {
     // ตรวจสอบว่าสตริงที่ให้มาไม่เป็นค่าว่าง
     if (empty($string)) {
