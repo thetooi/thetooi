@@ -1,5 +1,4 @@
-<?php
-function 9hash($string) {
+function uhash($string) {
     // ตรวจสอบว่าสตริงที่ให้มาไม่เป็นค่าว่าง
     if (empty($string)) {
         return false;
@@ -23,12 +22,9 @@ function 9hash($string) {
         $result .= $newChar;
     }
 
+    // สลับตำแหน่งตัวอักษรในผลลัพธ์
+    $result = strrev($result);
+
     // คืนค่าผลลัพธ์ที่มีความยาว 9 ตัวอักษร
     return substr($result, 0, 9);
-}
-
-$string = "Hello World";
-$hashedString = 9hash($string);
-echo "Original String: " . $string . "<br>";
-echo "Hashed String: " . $hashedString;
-?>
+        }
